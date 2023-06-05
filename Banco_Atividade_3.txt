@@ -1,0 +1,20 @@
+INSERT INTO `comabem`.`UNIDADE` (`uni_medida`) VALUES ('Kilo');
+INSERT INTO `comabem`.`UNIDADE` (`uni_medida`) VALUES ('Unidade');
+INSERT INTO `comabem`.`UNIDADE` (`uni_medida`) VALUES ('Litro');
+INSERT INTO `comabem`.`UNIDADE` (`uni_medida`) VALUES ('Metro');
+INSERT INTO `comabem`.`UNIDADE` (`uni_medida`) VALUES ('Duzia');
+
+INSERT INTO `comabem`.`PRODUTOS` (`prod_nome`, `prod_valor`, `prod_quantidade`, `UNIDADE_uni_cod`) VALUES ('carne', '30.0', '2', '1');
+INSERT INTO `comabem`.`PRODUTOS` (`prod_nome`, `prod_valor`, `prod_quantidade`, `UNIDADE_uni_cod`) VALUES ('óleo', '30.0', '1', '2');
+INSERT INTO `comabem`.`PRODUTOS` (`prod_nome`, `prod_valor`, `prod_quantidade`, `UNIDADE_uni_cod`) VALUES ('leite', '30.0', '1.5', '3');
+INSERT INTO `comabem`.`PRODUTOS` (`prod_nome`, `prod_valor`, `prod_quantidade`, `UNIDADE_uni_cod`) VALUES ('alface', '30.0', '1', '2');
+
+
+UPDATE `comabem`.`PRODUTOS` SET `prod_valor` = '25' WHERE (`prod_cod` = '1');
+
+
+SELECT * FROM PRODUTOS;
+SELECT * FROM UNIDADE;
+
+
+DELETE FROM `comabem`.`UNIDADE` WHERE (`uni_cod` = '4');
