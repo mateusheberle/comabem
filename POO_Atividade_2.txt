@@ -1,0 +1,40 @@
+class Pessoa {
+  constructor(auxNome, auxEndereco){
+    this.nome = auxNome;
+    this.endereco = auxEndereco;
+  }
+  getNome(){ return this.nome; }
+  getEndereco(){ return this.endereco; }
+  setNome(auxNome){ this.nome = auxNome; }
+  setEndereco(auxEndereco){ this.endereco = auxEndereco; }
+}
+
+// var p1 = new Pessoa("Ana", "Rua 1");
+// console.log(p1.getNome());
+// console.log(p1.getEndereco());
+
+class PessoaJurifica extends Pessoa {
+  constructor(auxNome, auxEndereco, auxCNPJ, auxRazaoSocial){
+    super(auxNome, auxEndereco);
+    this.CNPJ = auxCNPJ;
+    this.RazaoSocial = auxRazaoSocial
+  }
+  getCNPJ(){ return this.CNPJ; }
+  getRazaoSocial(){ return this.RazaoSocial; }
+
+  setCNPJ(auxCNPJ){ this.CNPJ = auxCNPJ; }
+  setRazaoSocial(auxRazaoSocial){ this.RazaoSocial = auxRazaoSocial; }
+}
+
+class PessoaFisica extends Pessoa {
+  constructor(auxNome, auxEndereco, auxCPF, auxDataNascimento){
+    super(auxNome, auxEndereco);
+    this.CPF = auxCPF;
+    this.DataNascimento = auxDataNascimento
+  }
+  getCPF(){ return this.CPF; }
+  getDataNascimento(){ return this.DataNascimento; }
+
+  setCPF(auxCPF){ this.CPF = auxCPF; }
+  setDataNascimento(auxDataNascimento){ this.DataNascimento = auxDataNascimento; }
+}
